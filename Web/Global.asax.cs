@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Web;
+using System.Web.Optimization;
 using System.Web.Routing;
 using System.Web.Http;
 
@@ -13,6 +14,7 @@ namespace Web
             // Code that runs on application startup
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
 
         void Application_End(object sender, EventArgs e)
